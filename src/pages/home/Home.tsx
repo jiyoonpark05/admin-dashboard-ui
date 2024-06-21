@@ -1,8 +1,11 @@
+import TopBox from "../../components/topBox/TopBox";
 import "./home.scss";
 const Home = () => {
   return (
     <div className="home">
-      <div className="box box1">BOX1</div>
+      <div className="box box1">
+        <TopBox />
+      </div>
       <div className="box box2">BOX2</div>
       <div className="box box3">BOX3</div>
       <div className="box box4">BOX4</div>
