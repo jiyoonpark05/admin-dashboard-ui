@@ -60,7 +60,7 @@ const Users = () => {
         <h1>Users</h1>
         <button onClick={() => setOpen(true)}>Add new User</button>
       </div>
-      <DataTable columns={columns} rows={userRows} slug={""} />
+      <DataTable slug="users" columns={columns} rows={userRows} />
       {open && <Add slug="user" columns={columns} setOpen={setOpen} />}
     </div>
   );
