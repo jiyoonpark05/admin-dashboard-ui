@@ -6,11 +6,11 @@ import { useState } from "react";
 import Add from "../../components/add/Add";
 
 const columns: GridColDef[] = [
-  { field: "id", headerName: "ID", width: 90 },
+  { field: "id", headerName: "ID", width: 50 },
   {
     field: "img",
     headerName: "Avatar",
-    width: 100,
+    width: 80,
     renderCell: (params) => {
       return <img src={params.row.img || "/noavatar.png"} alt="" />;
     },
@@ -42,7 +42,7 @@ const columns: GridColDef[] = [
   {
     field: "createdAt",
     headerName: "Created At",
-    width: 200,
+    width: 100,
     type: "string",
   },
   {
