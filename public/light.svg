@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="20" height="20" viewBox="-15 -15 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <style type="text/css">
+    #ray {stroke: white; stroke-width: 2;stroke-linecap: round;}
+  </style>
+  <circle xlink:href="#circle" r="6" fill="white"/>
+  <path id="ray" d="M 0, 11 L 0, 14" />
+  <use xlink:href="#ray" transform="rotate(45)" />
+  <use xlink:href="#ray" transform="rotate(90)" />
+  <use xlink:href="#ray" transform="rotate(135)" />
+  <use xlink:href="#ray" transform="rotate(180)" />
+  <use xlink:href="#ray" transform="rotate(225)" />
+  <use xlink:href="#ray" transform="rotate(270)" />
+  <use xlink:href="#ray" transform="rotate(315)" />
+</svg>

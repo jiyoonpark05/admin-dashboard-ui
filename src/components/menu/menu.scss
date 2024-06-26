@@ -4,16 +4,19 @@
 
 .menu {
     .item{
-
         display: flex;
         flex-direction: column;
         gap:10px;
         margin-bottom: 20px;
+        
+        &:last-child {
+            margin-bottom: 0px;
+        }
 
         .title {
             font-size: $font-sm;
             font-weight: 200;
-            color: $soft-color;
+            color: var(--soft-color);
             text-transform: uppercase;
 
             @include lg {
@@ -27,15 +30,14 @@
             gap:10px;
             padding:10px;
             border-radius: 5px;
-
+            
             &:hover {
-                background-color: $soft-bg;
+                background-color: var(--soft-bg);
             }
 
-            // img {
-            //     @include iconBg()
-
-            // }
+            img {
+                filter: var(--icon-color)
+            }
             .listItemTitle {
                 @include lg {
                     display : none;

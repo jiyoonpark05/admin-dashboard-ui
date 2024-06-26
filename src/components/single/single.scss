@@ -74,7 +74,7 @@
                 position: relative;
                 width: 1px;
                 padding-top: 50px;
-                background-color: $red-color;
+                background-color: var(--red-color);
 
                 &::after {
                     content: "";
@@ -84,15 +84,14 @@
                     width: 10px;
                     height: 10px;
                     border-radius: 50%;
-                    background-color: $red-color;
+                    background-color: var(--red-color);
                     transform: translateX(-50%);
                 }
 
                 div {
                     min-width: 400px;
                     padding : 15px;
-                    // background-color: #f45b6810;
-                    background-color: rgba($red-color,0.2);
+                    background-color: var(--red-bg);
                     @include md {
                         min-width: 250px;
                     }

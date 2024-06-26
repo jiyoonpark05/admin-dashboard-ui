@@ -1,17 +1,38 @@
-// Background
-$main-bg: #2a3447;
-$soft-bg: #384256;
-$dart-bg: #222b3c;
-
-// color
-$main-color:white;
-$soft-color:#ddd;
-$dark-color:#2a3447;
-$red-color:#f45b69;
-
 // Font size
 $font-sm : 12px;
 $font-md : 14px;
 $font-lg : 16px;
 $font-xlg : 20px;
 $font-xxlg : 24px;
+
+// Theme
+$theme-light: (
+    // Background
+    main-bg: #f4f7f8,
+    soft-bg: #38425620,
+    box-bg: #ffffff,
+    red-bg:#f45b6920,
+
+    // color
+    main-color:#2a3447,
+    icon-color:invert(1) sepia(1) saturate(5) hue-rotate(180deg),
+    soft-color:#384256,
+    dark-color:#2a3447,
+    red-color:#f45b69,
+    border-color: #ffffff,
+);
+
+$theme-dark: (
+    // Background
+    main-bg: #2a3447,
+    soft-bg: #384256,
+    box-bg: transperant,
+    red-bg:#f45b6940,
+    // color
+    main-color:white,
+    icon-color: none,
+    soft-color:#ddd,
+    dark-color:#2a3447,
+    red-color:#f45b69,
+    border-color: #384256,
+);

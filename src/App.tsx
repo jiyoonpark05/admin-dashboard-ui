@@ -7,14 +7,26 @@ import Menu from "./components/menu/Menu";
 import Footer from "./components/footer/Footer";
 import Login from "./pages/login/Login";
 import "./styles/global.scss";
+import "./App.scss";
 import User from "./components/user/User";
 import Product from "./components/product/Product";
+import { useState } from "react";
 
 function App() {
+  const [isDark, setIsDark] = useState(false);
+
+  const toggleTheme = () => {
+    setIsDark(!isDark);
+    document.documentElement.setAttribute(
+      "data-theme",
+      isDark ? "dark" : "light"
+    );
+  };
+
   const Layout = () => {
     return (
       <div className="main">
-        <Navbar />
+        <Navbar handleTheme={toggleTheme} isDark={isDark} />
         <div className="container">
           <div className="menuContainer">
             <Menu />

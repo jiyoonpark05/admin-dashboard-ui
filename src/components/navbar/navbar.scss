@@ -20,12 +20,17 @@
         gap: 20px;
 
         .icon {
+            cursor: pointer;
+            filter: var(--icon-color);
             @include sm {
                 display : none;
             }
         }
         .notification{
             position:relative;
+            img {
+                filter: var(--icon-color);
+            }
             span {
                 width: 16px;
                 height: 16px;
@@ -38,7 +43,7 @@
                 border-radius: 50%;
                 color : white;
                 font-size: $font-sm;
-                background-color: $red-color;
+                background-color: var(--red-color);
             }
         }
 

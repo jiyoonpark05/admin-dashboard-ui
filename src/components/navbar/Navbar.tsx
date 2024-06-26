@@ -1,5 +1,11 @@
 import "./navbar.scss";
-const Navbar = () => {
+const Navbar = ({
+  handleTheme,
+  isDark,
+}: {
+  handleTheme: any;
+  isDark: boolean;
+}) => {
   return (
     <div className="navbar">
       <div className="logo">
@@ -14,6 +20,21 @@ const Navbar = () => {
           <img src="/notifications.svg" alt="" />
           <span>1</span>
         </div>
+        {isDark ? (
+          <img
+            src="/dark.svg"
+            alt=""
+            className="icon"
+            onClick={() => handleTheme()}
+          />
+        ) : (
+          <img
+            src="/light.svg"
+            alt=""
+            className="icon"
+            onClick={() => handleTheme()}
+          />
+        )}
         <div className="user">
           <img src="/profile.jpeg" alt="profile" />
           <span>JANE</span>

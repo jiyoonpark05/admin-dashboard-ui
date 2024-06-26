@@ -24,6 +24,9 @@
         align-items: center;
         gap: 10px;
 
+        img {
+          filter: var(--icon-color);
+        }
         @include xxl{
           font-size: $font-md;
         }
