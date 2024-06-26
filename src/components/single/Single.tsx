@@ -1,5 +1,4 @@
 import "./single.scss";
-import { Tooltip } from "@mui/material";
 import {
   Legend,
   Line,
@@ -56,7 +55,6 @@ const Single = (props: Props) => {
                 >
                   <XAxis dataKey="name" />
                   <YAxis />
-                  <Tooltip />
                   <Legend />
                   {props.chart.dataKeys.map((dataKey) => (
                     <Line

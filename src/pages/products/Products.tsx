@@ -5,11 +5,11 @@ import Add from "../../components/add/Add";
 import { products } from "../../data";
 import { GridColDef } from "@mui/x-data-grid";
 const columns: GridColDef[] = [
-  { field: "id", headerName: "ID", width: 90 },
+  { field: "id", headerName: "ID", width: 50 },
   {
     field: "img",
     headerName: "Image",
-    width: 100,
+    width: 80,
     renderCell: (params) => {
       return <img src={params.row.img || "/noavatar.png"} alt="" />;
     },
@@ -18,19 +18,19 @@ const columns: GridColDef[] = [
     field: "title",
     type: "string",
     headerName: "Title",
-    width: 250,
+    width: 300,
   },
   {
     field: "color",
     type: "string",
     headerName: "Color",
-    width: 150,
+    width: 100,
   },
   {
     field: "price",
     type: "string",
     headerName: "Price",
-    width: 200,
+    width: 100,
   },
   {
     field: "producer",
@@ -41,13 +41,13 @@ const columns: GridColDef[] = [
   {
     field: "createdAt",
     headerName: "Created At",
-    width: 200,
+    width: 100,
     type: "string",
   },
   {
     field: "inStock",
     headerName: "In Stock",
-    width: 150,
+    width: 100,
     type: "boolean",
   },
 ];
