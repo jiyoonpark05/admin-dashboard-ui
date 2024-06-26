@@ -1,4 +1,5 @@
 @import "../../styles/responsive.scss";
+@import "../../styles/global.scss";
 
 .navbar{
     width: 100%;
@@ -36,8 +37,8 @@
                 right:-10px;
                 border-radius: 50%;
                 color : white;
-                font-size: 12px;
-                background-color: #f45b69;
+                font-size: $font-sm;
+                background-color: $red-color;
             }
         }
 

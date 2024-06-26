@@ -1,4 +1,5 @@
 @import "../../styles/responsive.scss";
+@import "../../styles/global.scss";
 
 .chartBox {
     display: flex;
@@ -24,12 +25,12 @@
         gap: 10px;
 
         @include xxl{
-          font-size: 14px;
+          font-size: $font-md;
         }
 
         h1 {
           @include xxl{
-            font-size: 20px;
+            font-size: $font-xlg;
           }
         }
       }
@@ -53,16 +54,16 @@
   
         .percentage {
           font-weight: bold;
-          font-size: 20px;
+          font-size: $font-xlg;
           
           @include xxl{
-            font-size: 16px;
+            font-size: $font-lg;
           }
         
         }
   
         .duration{
-          font-size: 14px;
+          font-size: $font-md;
         }
       }
     }

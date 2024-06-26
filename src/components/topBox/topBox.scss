@@ -1,11 +1,12 @@
 @import "../../styles/responsive.scss";
+@import "../../styles/global.scss";
 
 .topBox {
     h1 {
         margin-bottom: 20px;
 
         @include xxl {
-           font-size: 24px;
+           font-size: $font-xxlg;
         }
     }
 
@@ -41,12 +42,12 @@
                     gap:5px;
 
                     .username {
-                        font-size: 14px;
+                        font-size: $font-md;
                         font-weight: 500;
                     }
 
                     .email {
-                        font-size: 12px;
+                        font-size: $font-sm;
 
                         @include xxl {
                             display : none;

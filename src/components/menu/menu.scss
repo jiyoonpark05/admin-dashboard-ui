@@ -1,18 +1,21 @@
 @import "../../styles/variables.scss";
+@import "../../styles/global.scss";
 @import "../../styles/responsive.scss";
 
 .menu {
     .item{
+
         display: flex;
         flex-direction: column;
         gap:10px;
         margin-bottom: 20px;
 
         .title {
-            font-size: 12px;
+            font-size: $font-sm;
             font-weight: 200;
             color: $soft-color;
             text-transform: uppercase;
+
             @include lg {
                 display : none;
             }
@@ -29,6 +32,10 @@
                 background-color: $soft-bg;
             }
 
+            // img {
+            //     @include iconBg()
+
+            // }
             .listItemTitle {
                 @include lg {
                     display : none;
