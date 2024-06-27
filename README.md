@@ -1,30 +1,76 @@
-# React + TypeScript + Vite
+#### Theme
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dark
+![DARKMODE](public/ui_dark.png)
+Light
+![LIGHTMODE](public/ui_light.png)
 
-Currently, two official plugins are available:
+Used `documentElement.setAttribute()` to control theme for make things simple
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```javascript
+const [isDark, setIsDark] = useState(false);
 
-## Expanding the ESLint configuration
+const toggleTheme = () => {
+  setIsDark(!isDark);
+  document.documentElement.setAttribute(
+    "data-theme",
+    isDark ? "dark" : "light"
+  );
+};
+```
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+SCSS
 
-- Configure the top-level `parserOptions` property like this:
+```scss
+// ./variables.scss - Theme
+$theme-light: (...);
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
+$theme-dark: (...);
+
+// ./global.scss - Usage
+:root {
+  @each $key, $value in $theme-light {
+    --#{$key}: #{$value};
+  }
+}
+
+[data-theme="dark"] {
+  @each $key, $value in $theme-dark {
+    --#{$key}: #{$value};
+  }
 }
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+#### Responsive
+
+<div style="display:flex; justify-content:space-between; align-items:center">
+  <img src="public/ui_dark.png" width="35%" height="100%"/>
+  <img src="public/ui_lg.png" width="30%" height="100%"/>
+  <img src="public/ui_mdl.png" width="30%" height="100%"/>
+</div>
+<div style="display:flex; justify-content:space-between; align-items:center;">
+  <img src="public/ui_md.png" width="35%" height="100%"/>
+  <img src="public/ui_sm.png" width="30%" height="50%"/>
+  <img src="public/ui_xsm.png" width="30%" height="50%"/>
+</div>
+
+```scss
+$sm: 480px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1200px;
+$xxl: 1400px;
+
+@mixin sm {
+    @media screen and (max-width:($sm)) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media screen and (max-width:($md)) {
+        @content;
+    }
+}
+...
+```
